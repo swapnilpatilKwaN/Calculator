@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Heebo', sans-serif;
+        }
+        body{
+            background-color: #F0F0F0;
+        }
+        #main {
+            box-sizing: border-box;
+            width: 50%;
+            height: 350px;
+            background-color: aquamarine;
+            margin: auto;
+            background-color: #3B4664;
+        }
+
+        #title h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2rem;
+            padding-top: 5px;
+        }
+
+        #calculator {
+            width: 60%;
+            margin: auto;
+        }
+
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #191F32;
+            margin-bottom: 5px;
+            padding: 8px 3px;
+            border-radius: 5px;
+        }
+
+        #buttons-part{
+            background-color: #191F32;
+            padding-top: 8px;
+            padding-bottom: 6px;
+            border-radius: 5px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        button{
+            width: 25%;
+            height: 25%;
+            margin: 6px;
+            padding: 2px;
+            background-color: #ffffff;
+            border: none;
+            color: #000000;
+            border-radius: 5px;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #result {
+            width: 100%;
+            margin: 5px;
+            padding: 2px 5px;
+            border-radius: 5px;
+            border: none;
+            text-decoration: none;
+            background-color: transparent;
+            text-align: right;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+        @media screen and (max-width: 420px)
+        {
+         #main{
+             width: 320px;
+         }   
+        }
+    </style>
+    <script>
+        function myFunction(){
+            console.log("It's working");
+           /* document.getElementById("result").value+=7;*/
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="title">
+            <h2>Calculator</h2>
+        </div>
+        <div id="calculator">
+            <div class="row2">
+                <input type="text" id="result" name="result">
+            </div>
+            <div id="buttons-part">
+                <div class="row">
+                    <button onclick="document.getElementById('result').value+=7">7</button>
+                    <button onclick="document.getElementById('result').value+=8">8</button>
+                    <button onclick="document.getElementById('result').value+=9">9</button>
+                    <button style="background-color: #D13F30;" onclick="document.getElementById('result').value=eval(document.getElementById('result').value)"">=</button>
+                </div>
+
+                <div class="row">
+                    <button onclick="document.getElementById('result').value+=4">4</button>
+                    <button onclick="document.getElementById('result').value+=5">5</button>
+                    <button onclick="document.getElementById('result').value+=6">6</button>
+                    <button onclick="document.getElementById('result').value+='+'">+</button>
+                </div>
+                <div class="row">
+                    <button onclick="document.getElementById('result').value+=1">1</button>
+                    <button onclick="document.getElementById('result').value+=2">2</button>
+                    <button onclick="document.getElementById('result').value+=3">3</button>
+                    <button onclick="document.getElementById('result').value+='-'">-</button>
+                </div>
+                <div class="row">
+                    <button style="background-color: #D13F30;" onclick="document.getElementById('result').value=0">C</button>
+                    <button onclick="document.getElementById('result').value+=0">0</button>
+                    <button onclick="document.getElementById('result').value+='/'">/</button>
+                    <button onclick="document.getElementById('result').value+='*'">*</button>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
